@@ -26,5 +26,10 @@ public class UserController {
 	public String getUserInvoice(@PathVariable String userID, @RequestParam(value = "date", required = false) Date date) {
 		return "Invoice found for User is : " + userID + " on this date : " + date;
 	}
+	
+	@RequestMapping(value = "/{id}/invoices1", method = RequestMethod.GET)
+	public int getUserInvoiceNumber(@PathVariable int id) {
+		return  id;
+	}
 
 }
